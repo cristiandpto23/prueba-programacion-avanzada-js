@@ -1,4 +1,5 @@
 class Animal {
+    // Constructor de la clase Animal
     constructor(nombre, edad, img, comentarios, sonido) {
         this._nombre = nombre;
         this._edad = edad;
@@ -7,6 +8,7 @@ class Animal {
         this._sonido = sonido;
     }
 
+    // Getters y setters
     get nombre() {
         return this._nombre;
     }
@@ -31,6 +33,7 @@ class Animal {
         return this._sonido;
     }
 
+    // Método para reproducir el sonido del animal
     reproducirSonido() {
         const player = document.getElementById('player');
         player.src = `./assets/sounds/${this._sonido}`;
@@ -38,6 +41,7 @@ class Animal {
     }
 }
 
+// Clases hijas de la clase Animal
 export class Leon extends Animal {
     constructor(nombre, edad, img, comentarios, sonido) {
         super(nombre, edad, img, comentarios, sonido);
